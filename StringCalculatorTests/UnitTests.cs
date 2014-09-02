@@ -16,7 +16,7 @@ namespace StringCalculatorTests
         }
 
         [TestMethod]
-        public void TestEmptyString()
+        public void emptyStringTest()
         {
             int result = program.Add("");
 
@@ -24,7 +24,7 @@ namespace StringCalculatorTests
         }
 
         [TestMethod]
-        public void TestOneElementString()
+        public void oneElementStringTest()
         {
             int result = program.Add("1");
 
@@ -32,11 +32,19 @@ namespace StringCalculatorTests
         }
 
         [TestMethod]
-        public void TestTwoElementString()
+        public void twoElementStringTest()
         {
             int result = program.Add("1,2");
 
             Assert.AreEqual(3, result);
+        }
+
+        [TestMethod]
+        public void newSeparatorTest()
+        {
+            int result = program.Add("1\n2,3");
+
+            Assert.AreEqual(6, result);
         }
     }
 }
