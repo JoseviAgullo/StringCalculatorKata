@@ -23,7 +23,7 @@ namespace StringCalculatorKata
             else
             {
                 int result = 0;
-                elements = numbers.Split(new Char[] {','});
+                elements = numbers.Split(new Char[] {',', '\n'});
                 foreach(var elem in elements)
                 {
                     result += int.Parse(elem);
