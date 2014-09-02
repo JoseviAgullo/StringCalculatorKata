@@ -14,8 +14,14 @@ namespace StringCalculatorKata
 
         public int Add(string numbers)
         {
-
-            return 0;
+            if (numbers == "")
+            {
+                return 0;
+            }
+            else
+            {
+                return int.Parse(numbers);
+            }
         }
     }
 }
