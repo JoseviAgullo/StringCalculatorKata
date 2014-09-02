@@ -11,5 +11,10 @@ namespace StringCalculatorKata
         static void Main(string[] args)
         {
         }
+
+        public int Add(string numbers)
+        {
+            return 0;
+        }
     }
 }

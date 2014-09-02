@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringCalculatorKata;
 
 namespace StringCalculatorTests
 {
@@ -7,8 +8,13 @@ namespace StringCalculatorTests
     public class UnitTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void FirstTest()
         {
+            Program program = new Program();
+
+            int result = program.Add("");
+
+            Assert.AreEqual(0, result);
         }
     }
 }
