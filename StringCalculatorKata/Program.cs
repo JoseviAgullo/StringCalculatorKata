@@ -8,6 +8,8 @@ namespace StringCalculatorKata
 {
     public class Program
     {
+        String[] elements;
+
         static void Main(string[] args)
         {
         }
@@ -20,7 +22,13 @@ namespace StringCalculatorKata
             }
             else
             {
-                return int.Parse(numbers);
+                int result = 0;
+                elements = numbers.Split(new Char[] {','});
+                foreach(var elem in elements)
+                {
+                    result += int.Parse(elem);
+                }
+                return result;
             }
         }
     }

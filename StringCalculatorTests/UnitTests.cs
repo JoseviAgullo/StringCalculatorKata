@@ -30,5 +30,13 @@ namespace StringCalculatorTests
 
             Assert.AreEqual(1, result);
         }
+
+        [TestMethod]
+        public void TestTwoElementString()
+        {
+            int result = program.Add("1,2");
+
+            Assert.AreEqual(3, result);
+        }
     }
 }
