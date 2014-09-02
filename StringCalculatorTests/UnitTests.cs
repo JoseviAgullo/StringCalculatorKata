@@ -46,5 +46,13 @@ namespace StringCalculatorTests
 
             Assert.AreEqual(6, result);
         }
+
+        [TestMethod]
+        public void differentDelimitersSupportedTest()
+        {
+            int result = program.Add("//<\n1<2<3");
+
+            Assert.AreEqual(6, result);
+        }
     }
 }
