@@ -7,14 +7,28 @@ namespace StringCalculatorTests
     [TestClass]
     public class UnitTests
     {
-        [TestMethod]
-        public void FirstTest()
-        {
-            Program program = new Program();
+        Program program;
 
+        [TestInitialize]
+        public void setUp()
+        {
+            program = new Program();
+        }
+
+        [TestMethod]
+        public void TestEmptyString()
+        {
             int result = program.Add("");
 
             Assert.AreEqual(0, result);
+        }
+
+        [TestMethod]
+        public void TestOneElementString()
+        {
+            int result = program.Add("1");
+
+            Assert.AreEqual(1, result);
         }
     }
 }
