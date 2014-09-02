@@ -8,10 +8,10 @@ namespace StringCalculatorKata
 {
     public class Program
     {
-        String[] elements;
+        String[] elements, previousString;
 
         static void Main(string[] args)
-        {
+        {            
         }
 
         public int Add(string numbers)
@@ -23,7 +23,17 @@ namespace StringCalculatorKata
             else
             {
                 int result = 0;
-                elements = numbers.Split(new Char[] {',', '\n'});
+                if (numbers[0].Equals('/') && numbers[1].Equals('/'))
+                {                    
+                    previousString = numbers.Split(new Char[] { '\n' });
+                    elements = previousString[1].Split(new Char[] { numbers[2] });
+                    
+                }
+                else
+                {
+                    elements = numbers.Split(new Char[] { ',', '\n' });                    
+                }
+                
                 foreach(var elem in elements)
                 {
                     result += int.Parse(elem);
